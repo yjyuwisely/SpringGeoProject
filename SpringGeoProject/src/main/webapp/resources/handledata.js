@@ -80,6 +80,13 @@ $(document).ready(function() {
 				let latitude=data.latitude;
 				let longitude=data.longitude;
 				let location=data.location;
+				let iwContent = '<div style="padding:5px; margin-bottom:30px; height:40px;">Hello World!';
+				let iwPosition = new kakao.maps.LatLng(latitude, longitude);
+				var infowindow = new kakao.maps.InfoWindow({
+				    position : iwPosition, 
+				    content : iwContent 
+				});
+				infowindow.open(map,addMarker(new kakao.maps.LatLng(latitude, longitude))); 
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
 				print.append("latitude = " + latitude + "/" + "longitude = " + longitude + "/" + "location = " + location);
 			},
