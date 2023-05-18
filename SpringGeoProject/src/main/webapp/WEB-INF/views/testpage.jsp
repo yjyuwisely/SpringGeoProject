@@ -5,6 +5,7 @@
 <head>
 <%request.setCharacterEncoding("utf-8");%>
 <meta charset="utf-8" />
+<link href="resources/css/testcss.css" rel="stylesheet" />
 <title>Insert title here</title>
 </head>
 <body>

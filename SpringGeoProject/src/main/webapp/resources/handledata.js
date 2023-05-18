@@ -81,7 +81,7 @@ $(document).ready(function() {
 				let latitude=data.latitude;
 				let longitude=data.longitude;
 				let location=data.location;
-				let iwContent = '<div style="padding:5px; margin-bottom:30px; height:40px;">Hello World!';
+				let iwContent = '<span class="info-title">Hello World!';
 				let iwPosition = new kakao.maps.LatLng(latitude, longitude);
 				var infowindow = new kakao.maps.InfoWindow({
 				    position : iwPosition, 
@@ -89,6 +89,19 @@ $(document).ready(function() {
 				});
 				infowindow.open(map,addMarker(new kakao.maps.LatLng(latitude, longitude))); 
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
+				var infoTitle = document.querySelectorAll('.info-title');
+				infoTitle.forEach(function(e) {
+					console.log("pretty iw connect");
+				    var w = e.offsetWidth + 10;
+				    var ml = w/2;
+				    e.parentElement.style.top = "37px";
+				    e.parentElement.style.left = "50%";
+				    e.parentElement.style.marginLeft = -ml+"px";
+				    e.parentElement.style.width = w+"px";
+				    e.parentElement.previousSibling.style.display = "none";
+				    e.parentElement.parentElement.style.border = "0px";
+				    e.parentElement.parentElement.style.background = "unset";
+				});
 				print.append("신장내과는 1층 입구에서 직진하여 우측에 있습니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
