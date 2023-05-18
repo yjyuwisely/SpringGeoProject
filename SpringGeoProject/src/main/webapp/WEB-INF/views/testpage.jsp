@@ -148,7 +148,11 @@ function hideMarkers() {
 <input type="button" id="Surgery" value="외과">
 <input type="button" id="Otolaryngology" value="이비인후과">
 <input type="button" id="Mental" value="정신건강의학과">
+<input type="button" id="MRI_CT" value="MRI/CT">
+<input type="button" id="caffe" value="카페">
+<input type="button" id="conv" value="편의점">
 
+심장내과/인포윈도우 스타일 이름 지정하고 넣기
 
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="resources/handledata.js"></script>

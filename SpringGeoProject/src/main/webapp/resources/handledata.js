@@ -3,6 +3,7 @@
  */
 console.log("handling connect!");
 
+
 $(document).ready(function() {
 	$("#getLocation").click(function(){
 		$.ajax({
@@ -88,7 +89,7 @@ $(document).ready(function() {
 				});
 				infowindow.open(map,addMarker(new kakao.maps.LatLng(latitude, longitude))); 
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("latitude = " + latitude + "/" + "longitude = " + longitude + "/" + "location = " + location);
+				print.append("신장내과는 1층 입구에서 직진하여 우측에 있습니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -119,7 +120,7 @@ $(document).ready(function() {
 				let longitude=data.longitude;
 				let location=data.location;
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("latitude = " + latitude + "/" + "longitude = " + longitude + "/" + "location = " + location);
+				print.append("소화기내과는 1층 입구에서 직진하면 있습니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -150,7 +151,7 @@ $(document).ready(function() {
 				let longitude=data.longitude;
 				let location=data.location;
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("latitude = " + latitude + "/" + "longitude = " + longitude + "/" + "location = " + location);
+				print.append("내분비내과는 1층 입구에서 직진하여 왼쪽 끝에 위치합니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -181,7 +182,7 @@ $(document).ready(function() {
 				let longitude=data.longitude;
 				let location=data.location;
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("latitude = " + latitude + "/" + "longitude = " + longitude + "/" + "location = " + location);
+				print.append("혈액종양내과는 1층 입구에서 좌측 맨 끝에 위치합니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -212,7 +213,7 @@ $(document).ready(function() {
 				let longitude=data.longitude;
 				let location=data.location;
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("latitude = " + latitude + "/" + "longitude = " + longitude + "/" + "location = " + location);
+				print.append("피부과는 1층 입구에서 우측으로 직진하여 신장내과 옆에 위치합니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -243,7 +244,7 @@ $(document).ready(function() {
 				let longitude=data.longitude;
 				let location=data.location;
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("latitude = " + latitude + "/" + "longitude = " + longitude + "/" + "location = " + location);
+				print.append("호흡기내과는 1층 입구에서 우측 맨 끝에 위치합니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -305,7 +306,7 @@ $(document).ready(function() {
 				let longitude=data.longitude;
 				let location=data.location;
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("latitude = " + latitude + "/" + "longitude = " + longitude + "/" + "location = " + location);
+				print.append("방사선종양학과는 2층 엘리베이터에서 좌측에 위치합니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -336,7 +337,7 @@ $(document).ready(function() {
 				let longitude=data.longitude;
 				let location=data.location;
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("latitude = " + latitude + "/" + "longitude = " + longitude + "/" + "location = " + location);
+				print.append("마취통증학과는 2층 엘리베이터에서 바로 우측에 위치합니다");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -367,7 +368,7 @@ $(document).ready(function() {
 				let longitude=data.longitude;
 				let location=data.location;
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("latitude = " + latitude + "/" + "longitude = " + longitude + "/" + "location = " + location);
+				print.append("가정의학과는 2층 엘리베이터에서 맨 끝 우측에 위치합니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -398,7 +399,7 @@ $(document).ready(function() {
 				let longitude=data.longitude;
 				let location=data.location;
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("latitude = " + latitude + "/" + "longitude = " + longitude + "/" + "location = " + location);
+				print.append("비뇨의학과는 2층 엘리베이터에서 직진하여 맨 끝 우측에 위치합니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -429,7 +430,7 @@ $(document).ready(function() {
 				let longitude=data.longitude;
 				let location=data.location;
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("latitude = " + latitude + "/" + "longitude = " + longitude + "/" + "location = " + location);
+				print.append("산부인과는 2층 엘리베이터에서 직진하여 성형외과 옆에 있습니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -460,7 +461,38 @@ $(document).ready(function() {
 				let longitude=data.longitude;
 				let location=data.location;
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("latitude = " + latitude + "/" + "longitude = " + longitude + "/" + "location = " + location);
+				print.append("성형외과는 2층 엘리베이터에서 직진하시면 있습니다.");
+			},
+			error : function(XMLHttpRequest, textStatus, errorThrown){
+            	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
+            	console.log("searchLocation.val() is = " + $("#searchLocation").val());
+			}
+		});
+	});
+});
+
+$(document).ready(function() {
+	$("#MRI_CT").click(function(){
+		function addMarker(position) {
+		    var marker = new kakao.maps.Marker({
+		        position: position		        
+		    });
+		    marker.setMap(map);
+		    map.setCenter(position);
+		}
+		$.ajax({
+			type : "GET",
+			url : "testpage/datas/CTMRI",
+			dataType : "json",
+			success : function(data){
+				console.log("success data is = " + data);
+				let print = $("#print");
+				print.empty();
+				let latitude=data.latitude;
+				let longitude=data.longitude;
+				let location=data.location;
+				addMarker(new kakao.maps.LatLng(latitude, longitude));
+				print.append("MRI CT는 2층 엘리베이터에서 좌측으로 가시면 방사선종양학과 옆에 있습니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -491,7 +523,7 @@ $(document).ready(function() {
 				let longitude=data.longitude;
 				let location=data.location;
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("latitude = " + latitude + "/" + "longitude = " + longitude + "/" + "location = " + location);
+				print.append("안과는 3층 엘리베이터에서  맨끝 좌측에 위치합니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -522,7 +554,7 @@ $(document).ready(function() {
 				let longitude=data.longitude;
 				let location=data.location;
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("latitude = " + latitude + "/" + "longitude = " + longitude + "/" + "location = " + location);
+				print.append("신경외과는 3층 엘리베이터에서  좌측에 위치합니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -553,7 +585,7 @@ $(document).ready(function() {
 				let longitude=data.longitude;
 				let location=data.location;
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("latitude = " + latitude + "/" + "longitude = " + longitude + "/" + "location = " + location);
+				print.append("신경과는 3층 엘리베이터에서 우측에 위치합니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -584,7 +616,7 @@ $(document).ready(function() {
 				let longitude=data.longitude;
 				let location=data.location;
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("latitude = " + latitude + "/" + "longitude = " + longitude + "/" + "location = " + location);
+				print.append("소아청소년과는 3층 엘리베이터에서 맨 끝 우측에 위치합니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -615,7 +647,7 @@ $(document).ready(function() {
 				let longitude=data.longitude;
 				let location=data.location;
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("latitude = " + latitude + "/" + "longitude = " + longitude + "/" + "location = " + location);
+				print.append("영상의학과는 3층 엘리베이터에서 직진하여 맨 끝 우측에 위치합니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -646,7 +678,7 @@ $(document).ready(function() {
 				let longitude=data.longitude;
 				let location=data.location;
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("latitude = " + latitude + "/" + "longitude = " + longitude + "/" + "location = " + location);
+				print.append("외과는 3층엘리베이터에서  직진하여 이비인후과 옆에 있습니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -677,7 +709,7 @@ $(document).ready(function() {
 				let longitude=data.longitude;
 				let location=data.location;
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("latitude = " + latitude + "/" + "longitude = " + longitude + "/" + "location = " + location);
+				print.append("이비인후과는 3층 엘리베이터에서 직진하여 외과 옆에 있습니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -708,7 +740,69 @@ $(document).ready(function() {
 				let longitude=data.longitude;
 				let location=data.location;
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("latitude = " + latitude + "/" + "longitude = " + longitude + "/" + "location = " + location);
+				print.append("정신건강의학과는 3층 엘리베이터에서 직진 후 우측 맨 끝에 위치합니다.");
+			},
+			error : function(XMLHttpRequest, textStatus, errorThrown){
+            	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
+            	console.log("searchLocation.val() is = " + $("#searchLocation").val());
+			}
+		});
+	});
+});
+
+$(document).ready(function() {
+	$("#caffe").click(function(){
+		function addMarker(position) {
+		    var marker = new kakao.maps.Marker({
+		        position: position		        
+		    });
+		    marker.setMap(map);
+		    map.setCenter(position);
+		}
+		$.ajax({
+			type : "GET",
+			url : "testpage/datas/cafe",
+			dataType : "json",
+			success : function(data){
+				console.log("success data is = " + data);
+				let print = $("#print");
+				print.empty();
+				let latitude=data.latitude;
+				let longitude=data.longitude;
+				let location=data.location;
+				addMarker(new kakao.maps.LatLng(latitude, longitude));
+				print.append("카페는 1층 입구에서 바로 오른쪽에 위치합니다.");
+			},
+			error : function(XMLHttpRequest, textStatus, errorThrown){
+            	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
+            	console.log("searchLocation.val() is = " + $("#searchLocation").val());
+			}
+		});
+	});
+});
+
+$(document).ready(function() {
+	$("#conv").click(function(){
+		function addMarker(position) {
+		    var marker = new kakao.maps.Marker({
+		        position: position		        
+		    });
+		    marker.setMap(map);
+		    map.setCenter(position);
+		}
+		$.ajax({
+			type : "GET",
+			url : "testpage/datas/conv",
+			dataType : "json",
+			success : function(data){
+				console.log("success data is = " + data);
+				let print = $("#print");
+				print.empty();
+				let latitude=data.latitude;
+				let longitude=data.longitude;
+				let location=data.location;
+				addMarker(new kakao.maps.LatLng(latitude, longitude));
+				print.append("편의점은 1층 입구에서 바로 왼쪽에 위치합니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
