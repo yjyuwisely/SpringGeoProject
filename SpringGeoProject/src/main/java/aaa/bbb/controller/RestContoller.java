@@ -19,7 +19,7 @@ public class RestContoller {
 	@Autowired
 	RestService restserv;
 	
-	@GetMapping("testpage/datas/{location}")
+	@GetMapping("departmentMap/datas/{location}")
 	public RestModel findLocation(@PathVariable String location) {
 		logger.info("location is = {}", location);
 		return restserv.location(location);

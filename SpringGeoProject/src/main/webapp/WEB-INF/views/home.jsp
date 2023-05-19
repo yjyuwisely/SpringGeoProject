@@ -55,13 +55,13 @@ request.setCharacterEncoding("utf-8");
 					<div class="centered-div">
 						<p class="gap-3 lead rounded text-dark fs-6 fw-light"
 							style="width: 300px; text-shadow: 1px 1px 1px white; background-color: rgba(255, 255, 255, 0.5);">
-							현재 사용자 위치를 기준으로 선택한 병원 내 진료 부서 및 편의시설로 가는 길을 안내하는 가이드입니다.</p>
+							현재 위치를 기준으로 병원 내 진료 부서 및 편의시설로 안내하는 가이드입니다.</p>
 					</div>
 					<div
 						class="text-center InternetIssue gap-3 d-sm-flex justify-content-sm-center Sans ">
 						<a href="departmentMap"
 							class="bg-gradient-primary-to-secondary btn btn-lg fs-4 fw-bolder mt-0"><span></span>
-							<span></span> <span></span> <span></span>병원 내 길찾기 가이드</a>
+							<span></span> <span></span> <span></span>병원 내부 위치 안내</a>
 					</div>
 				</div>
 			</div>

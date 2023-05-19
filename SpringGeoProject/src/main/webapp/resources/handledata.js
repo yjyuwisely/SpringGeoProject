@@ -8,7 +8,7 @@ $(document).ready(function() {
 	$("#getLocation").click(function(){
 		$.ajax({
 			type : "GET",
-			url : "testpage/datas/"+$("#searchLocation").val(),
+			url : "departmentMap/datas/"+$("#searchLocation").val(),
 			dataType : "json",
 			success : function(data){
 				console.log("success data is = " + data);
@@ -41,7 +41,7 @@ $(document).ready(function() {
 		}
 		$.ajax({
 			type : "GET",
-			url : "testpage/datas/donggang",
+			url : "departmentMap/datas/donggang",
 			dataType : "json",
 			success : function(data){
 				console.log("success data is = " + data);
@@ -72,7 +72,7 @@ $(document).ready(function() {
 		}
 		$.ajax({
 			type : "GET",
-			url : "testpage/datas/Renal",
+			url : "departmentMap/datas/Renal",
 			dataType : "json",
 			success : function(data){
 				console.log("success data is = " + data);
@@ -123,7 +123,7 @@ $(document).ready(function() {
 		}
 		$.ajax({
 			type : "GET",
-			url : "testpage/datas/gastroenterology",
+			url : "departmentMap/datas/gastroenterology",
 			dataType : "json",
 			success : function(data){
 				console.log("success data is = " + data);
@@ -154,7 +154,7 @@ $(document).ready(function() {
 		}
 		$.ajax({
 			type : "GET",
-			url : "testpage/datas/endocrine",
+			url : "departmentMap/datas/endocrine",
 			dataType : "json",
 			success : function(data){
 				console.log("success data is = " + data);
@@ -185,7 +185,7 @@ $(document).ready(function() {
 		}
 		$.ajax({
 			type : "GET",
-			url : "testpage/datas/Hematologic",
+			url : "departmentMap/datas/Hematologic",
 			dataType : "json",
 			success : function(data){
 				console.log("success data is = " + data);
@@ -216,7 +216,7 @@ $(document).ready(function() {
 		}
 		$.ajax({
 			type : "GET",
-			url : "testpage/datas/Dermatology",
+			url : "departmentMap/datas/Dermatology",
 			dataType : "json",
 			success : function(data){
 				console.log("success data is = " + data);
@@ -247,7 +247,7 @@ $(document).ready(function() {
 		}
 		$.ajax({
 			type : "GET",
-			url : "testpage/datas/Respiratory",
+			url : "departmentMap/datas/Respiratory",
 			dataType : "json",
 			success : function(data){
 				console.log("success data is = " + data);
@@ -278,7 +278,7 @@ $(document).ready(function() {
 		}
 		$.ajax({
 			type : "GET",
-			url : "testpage/datas/cardiology",
+			url : "departmentMap/datas/cardiology",
 			dataType : "json",
 			success : function(data){
 				console.log("success data is = " + data);
@@ -309,7 +309,7 @@ $(document).ready(function() {
 		}
 		$.ajax({
 			type : "GET",
-			url : "testpage/datas/Radiological",
+			url : "departmentMap/datas/Radiological",
 			dataType : "json",
 			success : function(data){
 				console.log("success data is = " + data);
@@ -340,7 +340,7 @@ $(document).ready(function() {
 		}
 		$.ajax({
 			type : "GET",
-			url : "testpage/datas/Anesthesia",
+			url : "departmentMap/datas/Anesthesia",
 			dataType : "json",
 			success : function(data){
 				console.log("success data is = " + data);
@@ -371,7 +371,7 @@ $(document).ready(function() {
 		}
 		$.ajax({
 			type : "GET",
-			url : "testpage/datas/Family",
+			url : "departmentMap/datas/Family",
 			dataType : "json",
 			success : function(data){
 				console.log("success data is = " + data);
@@ -402,7 +402,7 @@ $(document).ready(function() {
 		}
 		$.ajax({
 			type : "GET",
-			url : "testpage/datas/urology",
+			url : "departmentMap/datas/urology",
 			dataType : "json",
 			success : function(data){
 				console.log("success data is = " + data);
@@ -433,7 +433,7 @@ $(document).ready(function() {
 		}
 		$.ajax({
 			type : "GET",
-			url : "testpage/datas/gynecology",
+			url : "departmentMap/datas/gynecology",
 			dataType : "json",
 			success : function(data){
 				console.log("success data is = " + data);
@@ -464,7 +464,7 @@ $(document).ready(function() {
 		}
 		$.ajax({
 			type : "GET",
-			url : "testpage/datas/plastic",
+			url : "departmentMap/datas/plastic",
 			dataType : "json",
 			success : function(data){
 				console.log("success data is = " + data);
@@ -495,7 +495,7 @@ $(document).ready(function() {
 		}
 		$.ajax({
 			type : "GET",
-			url : "testpage/datas/CTMRI",
+			url : "departmentMap/datas/CTMRI",
 			dataType : "json",
 			success : function(data){
 				console.log("success data is = " + data);
@@ -526,7 +526,7 @@ $(document).ready(function() {
 		}
 		$.ajax({
 			type : "GET",
-			url : "testpage/datas/Ophthalmology",
+			url : "departmentMap/datas/Ophthalmology",
 			dataType : "json",
 			success : function(data){
 				console.log("success data is = " + data);
@@ -557,7 +557,7 @@ $(document).ready(function() {
 		}
 		$.ajax({
 			type : "GET",
-			url : "testpage/datas/Neurosurgery",
+			url : "departmentMap/datas/Neurosurgery",
 			dataType : "json",
 			success : function(data){
 				console.log("success data is = " + data);
@@ -588,7 +588,7 @@ $(document).ready(function() {
 		}
 		$.ajax({
 			type : "GET",
-			url : "testpage/datas/Neurology",
+			url : "departmentMap/datas/Neurology",
 			dataType : "json",
 			success : function(data){
 				console.log("success data is = " + data);
@@ -619,7 +619,7 @@ $(document).ready(function() {
 		}
 		$.ajax({
 			type : "GET",
-			url : "testpage/datas/Pediatrics",
+			url : "departmentMap/datas/Pediatrics",
 			dataType : "json",
 			success : function(data){
 				console.log("success data is = " + data);
@@ -650,7 +650,7 @@ $(document).ready(function() {
 		}
 		$.ajax({
 			type : "GET",
-			url : "testpage/datas/Radiology",
+			url : "departmentMap/datas/Radiology",
 			dataType : "json",
 			success : function(data){
 				console.log("success data is = " + data);
@@ -681,7 +681,7 @@ $(document).ready(function() {
 		}
 		$.ajax({
 			type : "GET",
-			url : "testpage/datas/Surgery",
+			url : "departmentMap/datas/Surgery",
 			dataType : "json",
 			success : function(data){
 				console.log("success data is = " + data);
@@ -712,7 +712,7 @@ $(document).ready(function() {
 		}
 		$.ajax({
 			type : "GET",
-			url : "testpage/datas/Otolaryngology",
+			url : "departmentMap/datas/Otolaryngology",
 			dataType : "json",
 			success : function(data){
 				console.log("success data is = " + data);
@@ -743,7 +743,7 @@ $(document).ready(function() {
 		}
 		$.ajax({
 			type : "GET",
-			url : "testpage/datas/Mental",
+			url : "departmentMap/datas/Mental",
 			dataType : "json",
 			success : function(data){
 				console.log("success data is = " + data);
@@ -774,7 +774,7 @@ $(document).ready(function() {
 		}
 		$.ajax({
 			type : "GET",
-			url : "testpage/datas/cafe",
+			url : "departmentMap/datas/cafe",
 			dataType : "json",
 			success : function(data){
 				console.log("success data is = " + data);
@@ -805,7 +805,7 @@ $(document).ready(function() {
 		}
 		$.ajax({
 			type : "GET",
-			url : "testpage/datas/conv",
+			url : "departmentMap/datas/conv",
 			dataType : "json",
 			success : function(data){
 				console.log("success data is = " + data);

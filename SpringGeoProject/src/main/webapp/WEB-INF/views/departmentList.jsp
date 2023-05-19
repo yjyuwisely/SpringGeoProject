@@ -12,7 +12,7 @@ request.setCharacterEncoding("utf-8");
 	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta name="description" content="" />
 <meta name="author" content="" />
-<title>진료과 및 편의시설 선택하기</title>
+<title>진료과와 편의시설 위치</title>
 <!-- Favicon-->
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 <!-- Custom Google font-->
@@ -40,9 +40,7 @@ request.setCharacterEncoding("utf-8");
 		<div data-aos="fade-right" data-aos-offset="300"
 			data-aos-easing="ease-in-sine">
 			<div class="container col-xl-8 card  border-0">
-
 				<table class="mb-3">
-
 					<tr>
 						<td class="fw-bold">
 							<h1 class="container col-xl-8 text-left ps-4">
@@ -169,7 +167,6 @@ request.setCharacterEncoding("utf-8");
 							<input type="submit" name="location" id="cafe" value="카페"
 							class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2"></td>
 					</tr>
-
 				</table>
 			</div>
 		</div>
