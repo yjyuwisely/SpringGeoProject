@@ -1,8 +1,5 @@
-/**
- * 
- */
-console.log("handling connect!");
 
+console.log("handling connect!");
 
 $(document).ready(function() {
 	$("#getLocation").click(function(){
@@ -132,7 +129,26 @@ $(document).ready(function() {
 				let latitude=data.latitude;
 				let longitude=data.longitude;
 				let location=data.location;
+				let iwContent = '<span class="info-title">Hello World!';
+				let iwPosition = new kakao.maps.LatLng(latitude, longitude);
+				var infowindow = new kakao.maps.InfoWindow({
+				    position : iwPosition, 
+				    content : iwContent 
+				});
+				infowindow.open(map,addMarker(new kakao.maps.LatLng(latitude, longitude))); 
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
+				var infoTitle = document.querySelectorAll('.info-title');
+				infoTitle.forEach(function(e) {
+				    var w = e.offsetWidth + 10;
+				    var ml = w/2;
+				    e.parentElement.style.top = "37px";
+				    e.parentElement.style.left = "50%";
+				    e.parentElement.style.marginLeft = -ml+"px";
+				    e.parentElement.style.width = w+"px";
+				    e.parentElement.previousSibling.style.display = "none";
+				    e.parentElement.parentElement.style.border = "0px";
+				    e.parentElement.parentElement.style.background = "unset";
+				});				
 				print.append("소화기내과는 1층 입구에서 직진하면 있습니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
@@ -163,8 +179,26 @@ $(document).ready(function() {
 				let latitude=data.latitude;
 				let longitude=data.longitude;
 				let location=data.location;
+				let iwContent = '<span class="info-title">Hello World!';
+				let iwPosition = new kakao.maps.LatLng(latitude, longitude);
+				var infowindow = new kakao.maps.InfoWindow({
+				    position : iwPosition, 
+				    content : iwContent 
+				});
+				infowindow.open(map,addMarker(new kakao.maps.LatLng(latitude, longitude))); 
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("내분비내과는 1층 입구에서 직진하여 왼쪽 끝에 위치합니다.");
+				var infoTitle = document.querySelectorAll('.info-title');
+				infoTitle.forEach(function(e) {
+				    var w = e.offsetWidth + 10;
+				    var ml = w/2;
+				    e.parentElement.style.top = "37px";
+				    e.parentElement.style.left = "50%";
+				    e.parentElement.style.marginLeft = -ml+"px";
+				    e.parentElement.style.width = w+"px";
+				    e.parentElement.previousSibling.style.display = "none";
+				    e.parentElement.parentElement.style.border = "0px";
+				    e.parentElement.parentElement.style.background = "unset";
+				});				print.append("내분비내과는 1층 입구에서 직진하여 왼쪽 끝에 위치합니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -194,8 +228,26 @@ $(document).ready(function() {
 				let latitude=data.latitude;
 				let longitude=data.longitude;
 				let location=data.location;
+				let iwContent = '<span class="info-title">Hello World!';
+				let iwPosition = new kakao.maps.LatLng(latitude, longitude);
+				var infowindow = new kakao.maps.InfoWindow({
+				    position : iwPosition, 
+				    content : iwContent 
+				});
+				infowindow.open(map,addMarker(new kakao.maps.LatLng(latitude, longitude))); 
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("혈액종양내과는 1층 입구에서 좌측 맨 끝에 위치합니다.");
+				var infoTitle = document.querySelectorAll('.info-title');
+				infoTitle.forEach(function(e) {
+				    var w = e.offsetWidth + 10;
+				    var ml = w/2;
+				    e.parentElement.style.top = "37px";
+				    e.parentElement.style.left = "50%";
+				    e.parentElement.style.marginLeft = -ml+"px";
+				    e.parentElement.style.width = w+"px";
+				    e.parentElement.previousSibling.style.display = "none";
+				    e.parentElement.parentElement.style.border = "0px";
+				    e.parentElement.parentElement.style.background = "unset";
+				});				print.append("혈액종양내과는 1층 입구에서 좌측 맨 끝에 위치합니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -225,8 +277,26 @@ $(document).ready(function() {
 				let latitude=data.latitude;
 				let longitude=data.longitude;
 				let location=data.location;
+				let iwContent = '<span class="info-title">Hello World!';
+				let iwPosition = new kakao.maps.LatLng(latitude, longitude);
+				var infowindow = new kakao.maps.InfoWindow({
+				    position : iwPosition, 
+				    content : iwContent 
+				});
+				infowindow.open(map,addMarker(new kakao.maps.LatLng(latitude, longitude))); 
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("피부과는 1층 입구에서 우측으로 직진하여 신장내과 옆에 위치합니다.");
+				var infoTitle = document.querySelectorAll('.info-title');
+				infoTitle.forEach(function(e) {
+				    var w = e.offsetWidth + 10;
+				    var ml = w/2;
+				    e.parentElement.style.top = "37px";
+				    e.parentElement.style.left = "50%";
+				    e.parentElement.style.marginLeft = -ml+"px";
+				    e.parentElement.style.width = w+"px";
+				    e.parentElement.previousSibling.style.display = "none";
+				    e.parentElement.parentElement.style.border = "0px";
+				    e.parentElement.parentElement.style.background = "unset";
+				});				print.append("피부과는 1층 입구에서 우측으로 직진하여 신장내과 옆에 위치합니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -256,8 +326,26 @@ $(document).ready(function() {
 				let latitude=data.latitude;
 				let longitude=data.longitude;
 				let location=data.location;
+				let iwContent = '<span class="info-title">Hello World!';
+				let iwPosition = new kakao.maps.LatLng(latitude, longitude);
+				var infowindow = new kakao.maps.InfoWindow({
+				    position : iwPosition, 
+				    content : iwContent 
+				});
+				infowindow.open(map,addMarker(new kakao.maps.LatLng(latitude, longitude))); 
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("호흡기내과는 1층 입구에서 우측 맨 끝에 위치합니다.");
+				var infoTitle = document.querySelectorAll('.info-title');
+				infoTitle.forEach(function(e) {
+				    var w = e.offsetWidth + 10;
+				    var ml = w/2;
+				    e.parentElement.style.top = "37px";
+				    e.parentElement.style.left = "50%";
+				    e.parentElement.style.marginLeft = -ml+"px";
+				    e.parentElement.style.width = w+"px";
+				    e.parentElement.previousSibling.style.display = "none";
+				    e.parentElement.parentElement.style.border = "0px";
+				    e.parentElement.parentElement.style.background = "unset";
+				});				print.append("호흡기내과는 1층 입구에서 우측 맨 끝에 위치합니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -287,8 +375,26 @@ $(document).ready(function() {
 				let latitude=data.latitude;
 				let longitude=data.longitude;
 				let location=data.location;
+				let iwContent = '<span class="info-title">Hello World!';
+				let iwPosition = new kakao.maps.LatLng(latitude, longitude);
+				var infowindow = new kakao.maps.InfoWindow({
+				    position : iwPosition, 
+				    content : iwContent 
+				});
+				infowindow.open(map,addMarker(new kakao.maps.LatLng(latitude, longitude))); 
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("latitude = " + latitude + "/" + "longitude = " + longitude + "/" + "location = " + location);
+				var infoTitle = document.querySelectorAll('.info-title');
+				infoTitle.forEach(function(e) {
+				    var w = e.offsetWidth + 10;
+				    var ml = w/2;
+				    e.parentElement.style.top = "37px";
+				    e.parentElement.style.left = "50%";
+				    e.parentElement.style.marginLeft = -ml+"px";
+				    e.parentElement.style.width = w+"px";
+				    e.parentElement.previousSibling.style.display = "none";
+				    e.parentElement.parentElement.style.border = "0px";
+				    e.parentElement.parentElement.style.background = "unset";
+				});				print.append("latitude = " + latitude + "/" + "longitude = " + longitude + "/" + "location = " + location);
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -318,8 +424,26 @@ $(document).ready(function() {
 				let latitude=data.latitude;
 				let longitude=data.longitude;
 				let location=data.location;
+				let iwContent = '<span class="info-title">Hello World!';
+				let iwPosition = new kakao.maps.LatLng(latitude, longitude);
+				var infowindow = new kakao.maps.InfoWindow({
+				    position : iwPosition, 
+				    content : iwContent 
+				});
+				infowindow.open(map,addMarker(new kakao.maps.LatLng(latitude, longitude))); 
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("방사선종양학과는 2층 엘리베이터에서 좌측에 위치합니다.");
+				var infoTitle = document.querySelectorAll('.info-title');
+				infoTitle.forEach(function(e) {
+				    var w = e.offsetWidth + 10;
+				    var ml = w/2;
+				    e.parentElement.style.top = "37px";
+				    e.parentElement.style.left = "50%";
+				    e.parentElement.style.marginLeft = -ml+"px";
+				    e.parentElement.style.width = w+"px";
+				    e.parentElement.previousSibling.style.display = "none";
+				    e.parentElement.parentElement.style.border = "0px";
+				    e.parentElement.parentElement.style.background = "unset";
+				});				print.append("방사선종양학과는 2층 엘리베이터에서 좌측에 위치합니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -349,8 +473,26 @@ $(document).ready(function() {
 				let latitude=data.latitude;
 				let longitude=data.longitude;
 				let location=data.location;
+				let iwContent = '<span class="info-title">Hello World!';
+				let iwPosition = new kakao.maps.LatLng(latitude, longitude);
+				var infowindow = new kakao.maps.InfoWindow({
+				    position : iwPosition, 
+				    content : iwContent 
+				});
+				infowindow.open(map,addMarker(new kakao.maps.LatLng(latitude, longitude))); 
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("마취통증학과는 2층 엘리베이터에서 바로 우측에 위치합니다");
+				var infoTitle = document.querySelectorAll('.info-title');
+				infoTitle.forEach(function(e) {
+				    var w = e.offsetWidth + 10;
+				    var ml = w/2;
+				    e.parentElement.style.top = "37px";
+				    e.parentElement.style.left = "50%";
+				    e.parentElement.style.marginLeft = -ml+"px";
+				    e.parentElement.style.width = w+"px";
+				    e.parentElement.previousSibling.style.display = "none";
+				    e.parentElement.parentElement.style.border = "0px";
+				    e.parentElement.parentElement.style.background = "unset";
+				});				print.append("마취통증학과는 2층 엘리베이터에서 바로 우측에 위치합니다");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -380,8 +522,26 @@ $(document).ready(function() {
 				let latitude=data.latitude;
 				let longitude=data.longitude;
 				let location=data.location;
+				let iwContent = '<span class="info-title">Hello World!';
+				let iwPosition = new kakao.maps.LatLng(latitude, longitude);
+				var infowindow = new kakao.maps.InfoWindow({
+				    position : iwPosition, 
+				    content : iwContent 
+				});
+				infowindow.open(map,addMarker(new kakao.maps.LatLng(latitude, longitude))); 
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("가정의학과는 2층 엘리베이터에서 맨 끝 우측에 위치합니다.");
+				var infoTitle = document.querySelectorAll('.info-title');
+				infoTitle.forEach(function(e) {
+				    var w = e.offsetWidth + 10;
+				    var ml = w/2;
+				    e.parentElement.style.top = "37px";
+				    e.parentElement.style.left = "50%";
+				    e.parentElement.style.marginLeft = -ml+"px";
+				    e.parentElement.style.width = w+"px";
+				    e.parentElement.previousSibling.style.display = "none";
+				    e.parentElement.parentElement.style.border = "0px";
+				    e.parentElement.parentElement.style.background = "unset";
+				});				print.append("가정의학과는 2층 엘리베이터에서 맨 끝 우측에 위치합니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -411,8 +571,26 @@ $(document).ready(function() {
 				let latitude=data.latitude;
 				let longitude=data.longitude;
 				let location=data.location;
+				let iwContent = '<span class="info-title">Hello World!';
+				let iwPosition = new kakao.maps.LatLng(latitude, longitude);
+				var infowindow = new kakao.maps.InfoWindow({
+				    position : iwPosition, 
+				    content : iwContent 
+				});
+				infowindow.open(map,addMarker(new kakao.maps.LatLng(latitude, longitude))); 
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("비뇨의학과는 2층 엘리베이터에서 직진하여 맨 끝 우측에 위치합니다.");
+				var infoTitle = document.querySelectorAll('.info-title');
+				infoTitle.forEach(function(e) {
+				    var w = e.offsetWidth + 10;
+				    var ml = w/2;
+				    e.parentElement.style.top = "37px";
+				    e.parentElement.style.left = "50%";
+				    e.parentElement.style.marginLeft = -ml+"px";
+				    e.parentElement.style.width = w+"px";
+				    e.parentElement.previousSibling.style.display = "none";
+				    e.parentElement.parentElement.style.border = "0px";
+				    e.parentElement.parentElement.style.background = "unset";
+				});				print.append("비뇨의학과는 2층 엘리베이터에서 직진하여 맨 끝 우측에 위치합니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -442,8 +620,26 @@ $(document).ready(function() {
 				let latitude=data.latitude;
 				let longitude=data.longitude;
 				let location=data.location;
+				let iwContent = '<span class="info-title">Hello World!';
+				let iwPosition = new kakao.maps.LatLng(latitude, longitude);
+				var infowindow = new kakao.maps.InfoWindow({
+				    position : iwPosition, 
+				    content : iwContent 
+				});
+				infowindow.open(map,addMarker(new kakao.maps.LatLng(latitude, longitude))); 
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("산부인과는 2층 엘리베이터에서 직진하여 성형외과 옆에 있습니다.");
+				var infoTitle = document.querySelectorAll('.info-title');
+				infoTitle.forEach(function(e) {
+				    var w = e.offsetWidth + 10;
+				    var ml = w/2;
+				    e.parentElement.style.top = "37px";
+				    e.parentElement.style.left = "50%";
+				    e.parentElement.style.marginLeft = -ml+"px";
+				    e.parentElement.style.width = w+"px";
+				    e.parentElement.previousSibling.style.display = "none";
+				    e.parentElement.parentElement.style.border = "0px";
+				    e.parentElement.parentElement.style.background = "unset";
+				});				print.append("산부인과는 2층 엘리베이터에서 직진하여 성형외과 옆에 있습니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -473,8 +669,26 @@ $(document).ready(function() {
 				let latitude=data.latitude;
 				let longitude=data.longitude;
 				let location=data.location;
+				let iwContent = '<span class="info-title">Hello World!';
+				let iwPosition = new kakao.maps.LatLng(latitude, longitude);
+				var infowindow = new kakao.maps.InfoWindow({
+				    position : iwPosition, 
+				    content : iwContent 
+				});
+				infowindow.open(map,addMarker(new kakao.maps.LatLng(latitude, longitude))); 
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("성형외과는 2층 엘리베이터에서 직진하시면 있습니다.");
+				var infoTitle = document.querySelectorAll('.info-title');
+				infoTitle.forEach(function(e) {
+				    var w = e.offsetWidth + 10;
+				    var ml = w/2;
+				    e.parentElement.style.top = "37px";
+				    e.parentElement.style.left = "50%";
+				    e.parentElement.style.marginLeft = -ml+"px";
+				    e.parentElement.style.width = w+"px";
+				    e.parentElement.previousSibling.style.display = "none";
+				    e.parentElement.parentElement.style.border = "0px";
+				    e.parentElement.parentElement.style.background = "unset";
+				});				print.append("성형외과는 2층 엘리베이터에서 직진하시면 있습니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -504,8 +718,26 @@ $(document).ready(function() {
 				let latitude=data.latitude;
 				let longitude=data.longitude;
 				let location=data.location;
+				let iwContent = '<span class="info-title">Hello World!';
+				let iwPosition = new kakao.maps.LatLng(latitude, longitude);
+				var infowindow = new kakao.maps.InfoWindow({
+				    position : iwPosition, 
+				    content : iwContent 
+				});
+				infowindow.open(map,addMarker(new kakao.maps.LatLng(latitude, longitude))); 
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("MRI CT는 2층 엘리베이터에서 좌측으로 가시면 방사선종양학과 옆에 있습니다.");
+				var infoTitle = document.querySelectorAll('.info-title');
+				infoTitle.forEach(function(e) {
+				    var w = e.offsetWidth + 10;
+				    var ml = w/2;
+				    e.parentElement.style.top = "37px";
+				    e.parentElement.style.left = "50%";
+				    e.parentElement.style.marginLeft = -ml+"px";
+				    e.parentElement.style.width = w+"px";
+				    e.parentElement.previousSibling.style.display = "none";
+				    e.parentElement.parentElement.style.border = "0px";
+				    e.parentElement.parentElement.style.background = "unset";
+				});				print.append("MRI CT는 2층 엘리베이터에서 좌측으로 가시면 방사선종양학과 옆에 있습니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -535,8 +767,26 @@ $(document).ready(function() {
 				let latitude=data.latitude;
 				let longitude=data.longitude;
 				let location=data.location;
+				let iwContent = '<span class="info-title">Hello World!';
+				let iwPosition = new kakao.maps.LatLng(latitude, longitude);
+				var infowindow = new kakao.maps.InfoWindow({
+				    position : iwPosition, 
+				    content : iwContent 
+				});
+				infowindow.open(map,addMarker(new kakao.maps.LatLng(latitude, longitude))); 
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("안과는 3층 엘리베이터에서  맨끝 좌측에 위치합니다.");
+				var infoTitle = document.querySelectorAll('.info-title');
+				infoTitle.forEach(function(e) {
+				    var w = e.offsetWidth + 10;
+				    var ml = w/2;
+				    e.parentElement.style.top = "37px";
+				    e.parentElement.style.left = "50%";
+				    e.parentElement.style.marginLeft = -ml+"px";
+				    e.parentElement.style.width = w+"px";
+				    e.parentElement.previousSibling.style.display = "none";
+				    e.parentElement.parentElement.style.border = "0px";
+				    e.parentElement.parentElement.style.background = "unset";
+				});				print.append("안과는 3층 엘리베이터에서  맨끝 좌측에 위치합니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -566,8 +816,26 @@ $(document).ready(function() {
 				let latitude=data.latitude;
 				let longitude=data.longitude;
 				let location=data.location;
+				let iwContent = '<span class="info-title">Hello World!';
+				let iwPosition = new kakao.maps.LatLng(latitude, longitude);
+				var infowindow = new kakao.maps.InfoWindow({
+				    position : iwPosition, 
+				    content : iwContent 
+				});
+				infowindow.open(map,addMarker(new kakao.maps.LatLng(latitude, longitude))); 
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("신경외과는 3층 엘리베이터에서  좌측에 위치합니다.");
+				var infoTitle = document.querySelectorAll('.info-title');
+				infoTitle.forEach(function(e) {
+				    var w = e.offsetWidth + 10;
+				    var ml = w/2;
+				    e.parentElement.style.top = "37px";
+				    e.parentElement.style.left = "50%";
+				    e.parentElement.style.marginLeft = -ml+"px";
+				    e.parentElement.style.width = w+"px";
+				    e.parentElement.previousSibling.style.display = "none";
+				    e.parentElement.parentElement.style.border = "0px";
+				    e.parentElement.parentElement.style.background = "unset";
+				});				print.append("신경외과는 3층 엘리베이터에서  좌측에 위치합니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -597,8 +865,26 @@ $(document).ready(function() {
 				let latitude=data.latitude;
 				let longitude=data.longitude;
 				let location=data.location;
+				let iwContent = '<span class="info-title">Hello World!';
+				let iwPosition = new kakao.maps.LatLng(latitude, longitude);
+				var infowindow = new kakao.maps.InfoWindow({
+				    position : iwPosition, 
+				    content : iwContent 
+				});
+				infowindow.open(map,addMarker(new kakao.maps.LatLng(latitude, longitude))); 
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("신경과는 3층 엘리베이터에서 우측에 위치합니다.");
+				var infoTitle = document.querySelectorAll('.info-title');
+				infoTitle.forEach(function(e) {
+				    var w = e.offsetWidth + 10;
+				    var ml = w/2;
+				    e.parentElement.style.top = "37px";
+				    e.parentElement.style.left = "50%";
+				    e.parentElement.style.marginLeft = -ml+"px";
+				    e.parentElement.style.width = w+"px";
+				    e.parentElement.previousSibling.style.display = "none";
+				    e.parentElement.parentElement.style.border = "0px";
+				    e.parentElement.parentElement.style.background = "unset";
+				});				print.append("신경과는 3층 엘리베이터에서 우측에 위치합니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -628,8 +914,26 @@ $(document).ready(function() {
 				let latitude=data.latitude;
 				let longitude=data.longitude;
 				let location=data.location;
+				let iwContent = '<span class="info-title">Hello World!';
+				let iwPosition = new kakao.maps.LatLng(latitude, longitude);
+				var infowindow = new kakao.maps.InfoWindow({
+				    position : iwPosition, 
+				    content : iwContent 
+				});
+				infowindow.open(map,addMarker(new kakao.maps.LatLng(latitude, longitude))); 
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("소아청소년과는 3층 엘리베이터에서 맨 끝 우측에 위치합니다.");
+				var infoTitle = document.querySelectorAll('.info-title');
+				infoTitle.forEach(function(e) {
+				    var w = e.offsetWidth + 10;
+				    var ml = w/2;
+				    e.parentElement.style.top = "37px";
+				    e.parentElement.style.left = "50%";
+				    e.parentElement.style.marginLeft = -ml+"px";
+				    e.parentElement.style.width = w+"px";
+				    e.parentElement.previousSibling.style.display = "none";
+				    e.parentElement.parentElement.style.border = "0px";
+				    e.parentElement.parentElement.style.background = "unset";
+				});				print.append("소아청소년과는 3층 엘리베이터에서 맨 끝 우측에 위치합니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -659,8 +963,26 @@ $(document).ready(function() {
 				let latitude=data.latitude;
 				let longitude=data.longitude;
 				let location=data.location;
+				let iwContent = '<span class="info-title">Hello World!';
+				let iwPosition = new kakao.maps.LatLng(latitude, longitude);
+				var infowindow = new kakao.maps.InfoWindow({
+				    position : iwPosition, 
+				    content : iwContent 
+				});
+				infowindow.open(map,addMarker(new kakao.maps.LatLng(latitude, longitude))); 
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("영상의학과는 3층 엘리베이터에서 직진하여 맨 끝 우측에 위치합니다.");
+				var infoTitle = document.querySelectorAll('.info-title');
+				infoTitle.forEach(function(e) {
+				    var w = e.offsetWidth + 10;
+				    var ml = w/2;
+				    e.parentElement.style.top = "37px";
+				    e.parentElement.style.left = "50%";
+				    e.parentElement.style.marginLeft = -ml+"px";
+				    e.parentElement.style.width = w+"px";
+				    e.parentElement.previousSibling.style.display = "none";
+				    e.parentElement.parentElement.style.border = "0px";
+				    e.parentElement.parentElement.style.background = "unset";
+				});				print.append("영상의학과는 3층 엘리베이터에서 직진하여 맨 끝 우측에 위치합니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -690,8 +1012,26 @@ $(document).ready(function() {
 				let latitude=data.latitude;
 				let longitude=data.longitude;
 				let location=data.location;
+				let iwContent = '<span class="info-title">Hello World!';
+				let iwPosition = new kakao.maps.LatLng(latitude, longitude);
+				var infowindow = new kakao.maps.InfoWindow({
+				    position : iwPosition, 
+				    content : iwContent 
+				});
+				infowindow.open(map,addMarker(new kakao.maps.LatLng(latitude, longitude))); 
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("외과는 3층엘리베이터에서  직진하여 이비인후과 옆에 있습니다.");
+				var infoTitle = document.querySelectorAll('.info-title');
+				infoTitle.forEach(function(e) {
+				    var w = e.offsetWidth + 10;
+				    var ml = w/2;
+				    e.parentElement.style.top = "37px";
+				    e.parentElement.style.left = "50%";
+				    e.parentElement.style.marginLeft = -ml+"px";
+				    e.parentElement.style.width = w+"px";
+				    e.parentElement.previousSibling.style.display = "none";
+				    e.parentElement.parentElement.style.border = "0px";
+				    e.parentElement.parentElement.style.background = "unset";
+				});				print.append("외과는 3층엘리베이터에서  직진하여 이비인후과 옆에 있습니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -721,8 +1061,26 @@ $(document).ready(function() {
 				let latitude=data.latitude;
 				let longitude=data.longitude;
 				let location=data.location;
+				let iwContent = '<span class="info-title">Hello World!';
+				let iwPosition = new kakao.maps.LatLng(latitude, longitude);
+				var infowindow = new kakao.maps.InfoWindow({
+				    position : iwPosition, 
+				    content : iwContent 
+				});
+				infowindow.open(map,addMarker(new kakao.maps.LatLng(latitude, longitude))); 
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("이비인후과는 3층 엘리베이터에서 직진하여 외과 옆에 있습니다.");
+				var infoTitle = document.querySelectorAll('.info-title');
+				infoTitle.forEach(function(e) {
+				    var w = e.offsetWidth + 10;
+				    var ml = w/2;
+				    e.parentElement.style.top = "37px";
+				    e.parentElement.style.left = "50%";
+				    e.parentElement.style.marginLeft = -ml+"px";
+				    e.parentElement.style.width = w+"px";
+				    e.parentElement.previousSibling.style.display = "none";
+				    e.parentElement.parentElement.style.border = "0px";
+				    e.parentElement.parentElement.style.background = "unset";
+				});				print.append("이비인후과는 3층 엘리베이터에서 직진하여 외과 옆에 있습니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -752,8 +1110,26 @@ $(document).ready(function() {
 				let latitude=data.latitude;
 				let longitude=data.longitude;
 				let location=data.location;
+				let iwContent = '<span class="info-title">Hello World!';
+				let iwPosition = new kakao.maps.LatLng(latitude, longitude);
+				var infowindow = new kakao.maps.InfoWindow({
+				    position : iwPosition, 
+				    content : iwContent 
+				});
+				infowindow.open(map,addMarker(new kakao.maps.LatLng(latitude, longitude))); 
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("정신건강의학과는 3층 엘리베이터에서 직진 후 우측 맨 끝에 위치합니다.");
+				var infoTitle = document.querySelectorAll('.info-title');
+				infoTitle.forEach(function(e) {
+				    var w = e.offsetWidth + 10;
+				    var ml = w/2;
+				    e.parentElement.style.top = "37px";
+				    e.parentElement.style.left = "50%";
+				    e.parentElement.style.marginLeft = -ml+"px";
+				    e.parentElement.style.width = w+"px";
+				    e.parentElement.previousSibling.style.display = "none";
+				    e.parentElement.parentElement.style.border = "0px";
+				    e.parentElement.parentElement.style.background = "unset";
+				});				print.append("정신건강의학과는 3층 엘리베이터에서 직진 후 우측 맨 끝에 위치합니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -783,8 +1159,26 @@ $(document).ready(function() {
 				let latitude=data.latitude;
 				let longitude=data.longitude;
 				let location=data.location;
+				let iwContent = '<span class="info-title">Hello World!';
+				let iwPosition = new kakao.maps.LatLng(latitude, longitude);
+				var infowindow = new kakao.maps.InfoWindow({
+				    position : iwPosition, 
+				    content : iwContent 
+				});
+				infowindow.open(map,addMarker(new kakao.maps.LatLng(latitude, longitude))); 
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("카페는 1층 입구에서 바로 오른쪽에 위치합니다.");
+				var infoTitle = document.querySelectorAll('.info-title');
+				infoTitle.forEach(function(e) {
+				    var w = e.offsetWidth + 10;
+				    var ml = w/2;
+				    e.parentElement.style.top = "37px";
+				    e.parentElement.style.left = "50%";
+				    e.parentElement.style.marginLeft = -ml+"px";
+				    e.parentElement.style.width = w+"px";
+				    e.parentElement.previousSibling.style.display = "none";
+				    e.parentElement.parentElement.style.border = "0px";
+				    e.parentElement.parentElement.style.background = "unset";
+				});				print.append("카페는 1층 입구에서 바로 오른쪽에 위치합니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
@@ -814,8 +1208,26 @@ $(document).ready(function() {
 				let latitude=data.latitude;
 				let longitude=data.longitude;
 				let location=data.location;
+				let iwContent = '<span class="info-title">Hello World!';
+				let iwPosition = new kakao.maps.LatLng(latitude, longitude);
+				var infowindow = new kakao.maps.InfoWindow({
+				    position : iwPosition, 
+				    content : iwContent 
+				});
+				infowindow.open(map,addMarker(new kakao.maps.LatLng(latitude, longitude))); 
 				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("편의점은 1층 입구에서 바로 왼쪽에 위치합니다.");
+				var infoTitle = document.querySelectorAll('.info-title');
+				infoTitle.forEach(function(e) {
+				    var w = e.offsetWidth + 10;
+				    var ml = w/2;
+				    e.parentElement.style.top = "37px";
+				    e.parentElement.style.left = "50%";
+				    e.parentElement.style.marginLeft = -ml+"px";
+				    e.parentElement.style.width = w+"px";
+				    e.parentElement.previousSibling.style.display = "none";
+				    e.parentElement.parentElement.style.border = "0px";
+				    e.parentElement.parentElement.style.background = "unset";
+				});				print.append("편의점은 1층 입구에서 바로 왼쪽에 위치합니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
