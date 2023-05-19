@@ -43,4 +43,11 @@ public class HomeController {
 		return "testpage";
 	}
 	
+	@GetMapping("departmentMap")
+	public String departmentMap() {
+		logger.info("Welcome departmentMap!");
+		return "departmentMap";
+	}
+	
+
 }
