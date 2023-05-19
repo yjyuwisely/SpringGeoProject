@@ -1,15 +1,28 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="javax.naming.InitialContext" %>
+<%@ page import="javax.naming.NamingException" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <%request.setCharacterEncoding("utf-8");%>
+<%!
+    private String getApiKey() {
+        try {
+            InitialContext context = new InitialContext();
+            return (String) context.lookup("java:comp/env/API_KEY");
+        } catch (NamingException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+%>
 <meta charset="utf-8" />
 <link href="resources/css/testcss.css" rel="stylesheet" />
 <title>Insert title here</title>
 </head>
 <body>
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9e59e38aea07e8af3f0d4652fa425483"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=<%= getApiKey() %>"></script>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <div id="map" style="width:60%;height:700px;"></div>
 <script>
@@ -118,7 +131,7 @@ function hideMarkers() {
 	marker.setMap(null);
 }
 </script>
-
+<p>API Key: ${apiKey}</p>
 <input type="text" id="searchLocation"><br>
 <input type="button" id="getLocation" value="찾기"><br>
 <div id="print"></div>

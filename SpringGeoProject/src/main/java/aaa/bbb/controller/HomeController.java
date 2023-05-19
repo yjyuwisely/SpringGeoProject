@@ -6,6 +6,7 @@ import java.util.Locale;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -37,8 +38,12 @@ public class HomeController {
 		return "home";
 	}
 	
+//	@Value("${API_KEY}")
+//	private String apiKey;
+	
 	@GetMapping("testpage")
-	public String testpage() {
+	public String testpage(Model model) {
+		//model.addAttribute("apiKey", apiKey);
 		logger.info("Welcome testpage!");
 		return "testpage";
 	}
