@@ -30,6 +30,7 @@ request.setCharacterEncoding("utf-8");
 	rel="stylesheet" />
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="resources/css/styles.css" rel="stylesheet" />
+<link href="resources/css/mapButton.css" rel="stylesheet" />
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <!-- Navigation-->
@@ -39,6 +40,12 @@ request.setCharacterEncoding("utf-8");
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	
+.label {margin-bottom: 96px;}
+.label * {display: inline-block;vertical-align: top;}
+.label .left {background: url("https://t1.daumcdn.net/localimg/localimages/07/2011/map/storeview/tip_l.png") no-repeat;display: inline-block;height: 24px;overflow: hidden;vertical-align: top;width: 7px;}
+.label .center {background: url(https://t1.daumcdn.net/localimg/localimages/07/2011/map/storeview/tip_bg.png) repeat-x;display: inline-block;height: 24px;font-size: 12px;line-height: 24px;}
+.label .right {background: url("https://t1.daumcdn.net/localimg/localimages/07/2011/map/storeview/tip_r.png") -1px 0  no-repeat;display: inline-block;height: 24px;overflow: hidden;width: 6px;}
 }
 </style>
 
@@ -60,28 +67,28 @@ request.setCharacterEncoding("utf-8");
 					<div
 						class="text-center InternetIssue gap-3 d-sm-flex justify-content-sm-center Sans ">
 						<a href="departmentMap"
-							class="bg-gradient-primary-to-secondary btn btn-lg fs-4 fw-bolder mt-0"><span></span>
+							class="bg-gradient-primary-to-secondary btn btn-lg fs-5 fw-bolder mt-1"><span></span>
 							<span></span> <span></span> <span></span>병원 내부 위치 안내</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- Bootstrap core JS-->
-	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-	<script
-		src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.js"></script>
-	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	<script>
-		AOS.init();
-	</script>
-	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script src="resources/handledata.js"></script>
-	<!-- Kakao Map API -->
-	<script type="text/javascript"
-		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9e59e38aea07e8af3f0d4652fa425483"></script>
-	<script>
+<!-- Bootstrap core JS-->
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+	AOS.init();
+</script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="resources/handledata.js"></script>
+<!-- Kakao Map API -->
+<script type="text/javascript"
+	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9e59e38aea07e8af3f0d4652fa425483"></script>
+<script>
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
         center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
@@ -99,8 +106,15 @@ if (navigator.geolocation) {
         var lat = position.coords.latitude, // 위도
             lon = position.coords.longitude; // 경도
         
-        var locPosition = new kakao.maps.LatLng(lat, lon), // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
-            message = '<div style="padding:5px;">현재 위치</div>'; // 인포윈도우에 표시될 내용입니다
+        // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
+        var locPosition = new kakao.maps.LatLng(lat, lon),
+     		// 인포윈도우에 표시될 내용입니다  class="info-title"
+            message = /* '<div class ="label">
+            <span class="left"></span>
+            <span class="center">현재 위치</span>
+            <span class="right"></span>
+            </div>'; */
+            	'<div style="padding:5px; text-align: center;">현재 위치</div>'; 
         
         // 마커와 인포윈도우를 표시합니다
         displayMarker(locPosition, message);
@@ -110,7 +124,7 @@ if (navigator.geolocation) {
       }, function(error) {
           // 위치 정보를 가져오지 못할 경우 기본 위치로 설정합니다.
           var defaultPosition = new kakao.maps.LatLng(33.450701, 126.570667),
-              message = 'geolocation을 사용할 수 없어요..';
+              message = 'geolocation을 사용할 수 없어요.';
 
           displayMarker(defaultPosition, message);
         },
@@ -119,7 +133,7 @@ if (navigator.geolocation) {
 } else { // HTML5의 GeoLocation을 사용할 수 없을때 마커 표시 위치와 인포윈도우 내용을 설정합니다
     
     var locPosition = new kakao.maps.LatLng(33.450701, 126.570667),    
-        message = 'geolocation을 사용할수 없어요..'
+        message = 'geolocation을 사용할수 없어요.'
         
     displayMarker(locPosition, message);
 }
@@ -130,7 +144,7 @@ function displayMarker(locPosition, message) {
     // 마커를 생성합니다
     var marker = new kakao.maps.Marker({  
         map: map, 
-        position: locPosition
+        position: locPosition,
     }); 
     
     var iwContent = message, // 인포윈도우에 표시할 내용
@@ -149,41 +163,21 @@ function displayMarker(locPosition, message) {
     map.setCenter(locPosition);      
 }
 
-$(document).ready(function() {
-	$("#star").click(function(){
-		function addMarker(position) {
-		    // 마커를 생성합니다
-		    var marker = new kakao.maps.Marker({
-		        position: position		        
-		    });
-		    // 마커가 지도 위에 표시되도록 설정합니다
-		    marker.setMap(map);
-		    map.setCenter(position);
-		}
-		$.ajax({
-			type : "GET",
-			url : "testpage/datas/star",
-			dataType : "json",
-			success : function(data){
-				console.log("success data is = " + data);
-				let print = $("#print");
-				print.empty();
-				let latitude=data.latitude;
-				let longitude=data.longitude;
-				let location=data.location;
-				addMarker(new kakao.maps.LatLng(latitude, longitude));
-				print.append("latitude = " + latitude + "/" + "longitude = " + longitude + "/" + "location = " + location);
-			},
-			error : function(XMLHttpRequest, textStatus, errorThrown){
-            	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
-            	console.log("searchLocation.val() is = " + $("#searchLocation").val());
-			}
-		});
-	});
-});
 function hideMarkers() {
 	marker.setMap(null);
-}
-</script>
+} 
+
+// 지도, 스카이뷰 커스텀
+//일반 지도와 스카이뷰로 지도 타입을 전환할 수 있는 지도타입 컨트롤을 생성합니다
+var mapTypeControl = new kakao.maps.MapTypeControl();
+
+// 지도에 컨트롤을 추가해야 지도위에 표시됩니다
+// kakao.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
+map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+
+// 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+var zoomControl = new kakao.maps.ZoomControl();
+map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+</script> 
 </body>
 </html>
