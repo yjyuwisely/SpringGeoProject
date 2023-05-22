@@ -61,7 +61,7 @@ $(document).ready(function() {
 //병원 1층 편의시설
 //카페
 $(document).ready(function() {
-	$("#caffe").click(function(){
+	$("#cafe").click(function(){
 		function addMarker(position) {
 		    var marker = new kakao.maps.Marker({
 		        position: position		        
@@ -99,7 +99,7 @@ $(document).ready(function() {
 				    e.parentElement.previousSibling.style.display = "none";
 				    e.parentElement.parentElement.style.border = "0px";
 				    e.parentElement.parentElement.style.background = "unset";
-				});				print.append("카페는 1층 입구에서 바로 오른쪽에 위치합니다.");
+				});				print.append("1층 입구에서 바로 오른쪽에 위치합니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);

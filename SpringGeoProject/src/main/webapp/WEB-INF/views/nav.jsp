@@ -38,7 +38,7 @@
 		<!-- <div class="container px-5"> -->
 			<a class="print-hide navbar-brand LogoGradient-text Mont fs-5 px-3"
 				href="/"><span class="logo-text fw-bolder">ULSAN GREEN HOSPITAL </span></a>
-			<button class="navbar-toggler ms-auto" type="button"
+			<button class="navbar-toggler ms-auto mx-3" type="button"
 				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false"
 				aria-label="Toggle navigation">
@@ -53,7 +53,7 @@
 					<!-- <li class="nav-item nav-link">나눔소통</li> -->
 					<li class="nav-item nav-link">병원안내</li>
 				</ul>
-				<ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bolder">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bolder me-1">
 					<c:if test="${empty common.id and empty adminUser.id}">
 						<li class="nav-item"><a href="LogIn"
 							class="nav-link badge bg-gradient-primary-to-secondary text-white px-2 me-2 fs-6">로그인</a></li>

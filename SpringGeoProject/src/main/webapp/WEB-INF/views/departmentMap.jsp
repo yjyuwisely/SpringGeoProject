@@ -41,9 +41,30 @@ request.setCharacterEncoding("utf-8");
 	justify-content: center;
 	align-items: center;
 }
+
 header {
-	height: 10px !important;
-	opacity: 0.9;
+  height: 15px !important;
+  opacity: 0.9;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.map-container {
+  height: calc(100vh - 50%);
+  overflow-y: auto;
+}
+
+.department-buttons {
+  height: 35%;
+  overflow-y: auto;
+}
+
+#print {
+  margin: 0;
+  padding: 0;
 }
 </style>
 
@@ -51,160 +72,166 @@ header {
 <body class="d-flex flex-column h-100 flex-shrink-0">
 	<div data-aos="fade-right" data-aos-offset="300"
 		data-aos-easing="ease-in-sine">
-		<div class="container p-3">
+		<div class="map-container container px-3 pt-2 pb-3">
 			<div class="row justify-content-center align-items-center">
-				<div class="col-12 col-md-8 col-lg-6 col-xxl-7 text-center">
-					<div>
-						<span class="DarkText-gradient d-inline fw-bolder Sans fs-5">병원
-							내부 위치 안내 가이드</span>
-					</div>
-					<div class="centered-div ">
+				<div class="col-12 col-md-8 col-lg-6 col-xxl-7 text-start">
+						<span class="DarkText-gradient d-inline fw-bolder Sans fs-5">병원 내 위치 안내 가이드</span>
+					<div class="centered-div mt-2">
 						<!-- 지도 -->
-						<div id="map" style="width: 350px; height: 350px;"></div>
+						<div id="map" style="width: 100%; height: 40vh;"></div>
 					</div>
-					<div class="centered-div mt-2 text-left">
+					<div class="centered-div pt-3" style="height: 65px; overflow-y: auto;">
 						<!-- 위치 설명 문장 -->
-						<p id="print" class="gap-3 lead rounded text-dark fs-6 fw-bold">
+						<p id="print" class="gap-3 lead rounded text-dark fs-6 fw-bold Sans">
+						하단 버튼을 클릭하면 지도에 위치가 표시되며, 자세한 위치 설명이 표시됩니다.
 						</p>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-	<table class="mb-3">
-		<tr>
-			<td class="fw-bold">
-				<h1 class="container col-xl-8 text-left ps-4">
-					<img src="resources/images/building2.png"
-						style="width: 35px; height: 35px;" border="0" /> <span
-						class="text-gradient d-inline fw-bolder Sans fs-3">진료부서</span>
-				</h1>
-			</td>
-		</tr>
-		<!-- 1층 -->
-		<tr>
-			<td class="fw-bold">
-				<h1 class="container col-xl-8 text-left ps-4">
-					<span class=" d-inline fw-bolder Sans fs-5" style="color: #606060">1층</span>
-				</h1>
-			</td>
-		</tr>
-		<tr class="text-center">
+		</div><!-- map's section -->
+	</div><!-- aos effects -->
+	<span
+		style="height: 40px; width: 100%; background: linear-gradient(180deg, #EBF3FE, white);
+		  opacity: 0.9;"></span>
 
-			<td><input type="button" id="endocrine" value="내분비내과"
-				class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 Sans fw-bolder fs-6 m-2 mt-0">
-				<input type="button" id="Respiratory" value="호흡기내과"
-				class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 Sans fw-bolder fs-6 m-2 mt-0"></td>
-		</tr>
-		<tr class="text-center">
-			<td><input type="button" id="gastroenterology" value="소화기내과"
-				class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 Sans fw-bolder fs-6 m-2">
-				<input type="button" id="Renal" value="신장내과"
-				class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 Sans fw-bolder fs-6 m-2"></td>
-		</tr>
-		<tr class="text-center">
-			<td><input type="button" id="Hematologic" value="혈액종양내과"
-				class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 Sans fw-bolder fs-6 m-2">
-				<input type="button" id="Dermatology" value="피부과"
-				class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 Sans fw-bolder fs-6 m-2">
-			<td>
-		</tr>
-		<!-- 2층 -->
-		<tr>
-			<td class="fw-bold">
-				<h1 class="container col-xl-8 text-left ps-4">
-					<span class=" d-inline fw-bolder Sans fs-5" style="color: #606060">2층</span>
-				</h1>
-			</td>
-		</tr>
-		<tr class="text-center">
-			<td><input type="button" id="Family" value="가정의학과"
-				class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2 mt-0">
-				<input type="button" id="Radiological" value="방사선종양학과"
-				class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2 mt-0"></td>
-		</tr>
-		<tr class="text-center">
-			<td><input type="button" id="Anesthesia" value="마취통증학과"
-				class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2">
-				<input type="button" id="urology" value="비뇨의학과"
-				class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2"></td>
-		</tr>
-		<tr class="text-center">
-			<td><input type="button" id="gynecology" value="산부인과"
-				class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2">
-				<input type="button" id="plastic" value="성형외과"
-				class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2"></td>
-		</tr>
-		<tr class="text-center">
-			<td><input type="button" id="MRI_CT" value="MRI·CT실"
-				class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2"></td>
-		</tr>
-		<!-- 3층 -->
-		<tr>
-			<td class="fw-bold">
-				<h1 class="container col-xl-8 text-left ps-4">
-					<span class=" d-inline fw-bolder Sans fs-5" style="color: #606060">3층</span>
-				</h1>
-			</td>
-		</tr>
-		<tr class="text-center">
-			<td><input type="button" id="Ophthalmology" value="안과"
-				class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2 mt-0">
-				<input type="button" id="Radiology" value="영상의학과"
-				class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2 mt-0"></td>
-		</tr>
-		<tr class="text-center">
-			<td><input type="button" id="Otolaryngology" value="이비인후과"
-				class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2">
-				<input type="button" id="Surgery" value="외과"
-				class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2"></td>
-		</tr>
-		<tr class="text-center">
-			<td><input type="button" id="Pediatrics" value="소아청소년과"
-				class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2">
-				<input type="button" id="Neurology" value="신경과"
-				class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2"></td>
-		</tr>
-		<tr class="text-center">
-			<td><input type="button" id="Neurosurgery" value="신경외과"
-				class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2">
-				<input type="button" id="Mental" value="정신건강의학과"
-				class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2"></td>
-		</tr>
-		<!-- 편의시설 -->
-		<tr>
-			<td class="fw-bold">
-				<h1 class="container col-xl-8 text-left ps-4 pt-3">
-				<img src="resources/images/cafe.png"
-						style="width: 35px; height: 35px;" border="0" /> 
-					<span class="text-gradient d-inline fw-bolder Sans fs-3">편의시설</span>
-				</h1>
-			</td>
-		</tr>
-		<tr class="text-center">
-			<td><input type="button" id="conv" value="편의점"
-				class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2">
-				<input type="button" id="cafe" value="카페"
-				class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2"></td>
-		</tr>
-	</table>
+	<!-- departments buttons' section -->
+	<div class="department-buttons container col-xl-8 card border-0 px-0 ">
+		<table class="mb-3">
+			<tr>
+				<td class="fw-bold">
+					<h1 class="container col-xl-8 text-left ps-4 mb-0">
+						<img src="resources/images/building2.png"
+							style="width: 35px; height: 35px;" border="0" /> <span
+							class="text-gradient d-inline fw-bolder Sans fs-4">진료부서</span>
+					</h1>
+				</td>
+			</tr>
+			<!-- 1층 -->
+			<tr>
+				<td class="fw-bold">
+					<h1 class="container col-xl-8 text-left ps-4">
+						<span class="d-inline fw-bolder Sans fs-5" style="color: #606060">1층</span>
+					</h1>
+				</td>
+			</tr>
+			<tr class="text-center">
+				<td>
+				<input type="button" id="endocrine" value="내분비내과" 
+					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 Sans fw-bolder fs-6 m-2 mt-0">
+					<input type="button" id="Respiratory" value="호흡기내과"
+					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 Sans fw-bolder fs-6 m-2 mt-0"></td>
+			</tr>
+			<tr class="text-center">
+				<td>
+				<input type="button" id="gastroenterology" value="소화기내과"
+					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 Sans fw-bolder fs-6 m-2">
+					<input type="button" id="Renal" value="신장내과"
+					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 Sans fw-bolder fs-6 m-2"></td>
+			</tr>
+			<tr class="text-center">
+				<td>
+				<input type="button" id="Hematologic" value="혈액종양내과"
+					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 Sans fw-bolder fs-6 m-2">
+					<input type="button" id="Dermatology" value="피부과"
+					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 Sans fw-bolder fs-6 m-2">
+				</td>
+			</tr>
+			<!-- 2층 -->
+			<tr>
+				<td class="fw-bold">
+					<h1 class="container col-xl-8 text-left ps-4">
+						<span class=" d-inline fw-bolder Sans fs-5" style="color: #606060">2층</span>
+					</h1>
+				</td>
+			</tr>
+			<tr class="text-center">
+				<td><input type="button" id="Family" value="가정의학과"
+					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2 mt-0">
+					<input type="button" id="Radiological" value="방사선종양학과"
+					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2 mt-0"></td>
+			</tr>
+			<tr class="text-center">
+				<td><input type="button" id="Anesthesia" value="마취통증학과"
+					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2">
+					<input type="button" id="urology" value="비뇨의학과"
+					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2"></td>
+			</tr>
+			<tr class="text-center">
+				<td><input type="button" id="gynecology" value="산부인과"
+					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2">
+					<input type="button" id="plastic" value="성형외과"
+					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2"></td>
+			</tr>
+			<tr class="text-center">
+				<td><input type="button" id="MRI_CT" value="MRI·CT실"
+					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2"></td>
+			</tr>
+			<!-- 3층 -->
+			<tr>
+				<td class="fw-bold">
+					<h1 class="container col-xl-8 text-left ps-4">
+						<span class=" d-inline fw-bolder Sans fs-5" style="color: #606060">3층</span>
+					</h1>
+				</td>
+			</tr>
+			<tr class="text-center">
+				<td><input type="button" id="Ophthalmology" value="안과"
+					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2 mt-0">
+					<input type="button" id="Radiology" value="영상의학과"
+					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2 mt-0"></td>
+			</tr>
+			<tr class="text-center">
+				<td><input type="button" id="Otolaryngology" value="이비인후과"
+					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2">
+					<input type="button" id="Surgery" value="외과"
+					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2"></td>
+			</tr>
+			<tr class="text-center">
+				<td><input type="button" id="Pediatrics" value="소아청소년과"
+					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2">
+					<input type="button" id="Neurology" value="신경과"
+					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2"></td>
+			</tr>
+			<tr class="text-center">
+				<td><input type="button" id="Neurosurgery" value="신경외과"
+					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2">
+					<input type="button" id="Mental" value="정신건강의학과"
+					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2"></td>
+			</tr>
+			<!-- 편의시설 -->
+			<tr>
+				<td class="fw-bold">
+					<h1 class="container col-xl-8 text-left ps-4 pt-3">
+						<img src="resources/images/cafe.png"
+							style="width: 35px; height: 35px;" border="0" /> <span
+							class="text-gradient d-inline fw-bolder Sans fs-4">편의시설</span>
+					</h1>
+				</td>
+			</tr>
+			<tr class="text-center">
+				<td><input type="button" id="conv" value="편의점"
+					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2">
+					<input type="button" id="cafe" value="카페"
+					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 fw-bolder fs-6 m-2"></td>
+			</tr>
+		</table>
+	</div>
 
 	<!-- Bootstrap core JS-->
-	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-	<script
-		src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.js"></script>
-	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	<script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
 		AOS.init();
 	</script>
-	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script src="resources/handledata.js"></script>
-	<script src="resources/topButton.js"></script>
-	<!-- Kakao Map API -->
-	<script type="text/javascript"
-		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9e59e38aea07e8af3f0d4652fa425483"></script>
-	<script>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="resources/handledata.js"></script>
+		<!-- Kakao Map API -->
+		<script type="text/javascript"
+			src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9e59e38aea07e8af3f0d4652fa425483"></script>
+		<script>
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
         center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
@@ -221,8 +248,7 @@ if (navigator.geolocation) {
             lon = position.coords.longitude; // 경도
         
         var locPosition = new kakao.maps.LatLng(lat, lon), // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
-            message = '<div style="padding:5px;">현재 위치</div>'; // 인포윈도우에 표시될 내용입니다
-        
+            message = '<div style="width:100px;text-align:right;padding:6px 0;">현재 위치</div>';  // 인포윈도우에 표시될 내용입니다
         // 마커와 인포윈도우를 표시합니다
         displayMarker(locPosition, message);
         console.log("lat = " + lat);
@@ -281,19 +307,27 @@ map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
 var zoomControl = new kakao.maps.ZoomControl();
 map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 </script>
-	<!-- Top Button -->
-	<script>
-$(function(){
-  $("#gotop").hide();
-  $(window).scroll(function(){
-    if($(this).scrollTop() > 100){$("#gotop").fadeIn();}
-    else{$("#gotop").fadeOut();}
+<!-- Top Button -->
+<script>
+  $(function() {
+    $("#gotop").hide();
+    $(".department-buttons").scroll(function() {
+      if ($(this).scrollTop() > 100) {
+        $("#gotop").fadeIn();
+      } else {
+        $("#gotop").fadeOut();
+      }
+    });
+
+    $("#gotop").click(function(e) {
+      e.preventDefault();
+      $(".department-buttons").animate({ scrollTop: 0 }, "slow");
+    });
   });
-});
 </script>
-	<a href="#" id="gotop"
-		style="display: none; position: fixed; bottom: 10px; right: 10px; z-index: 99999999"
-		title="Top"> <img src="resources/images/topButton3.gif"
-		style="width: 35px; height: 35px; margin: -10px -5px;" border="0" /></a>
+<a href="#" id="gotop"
+	style="display: none; position: fixed; bottom: 1rem; right: 0.8rem; z-index: 99"
+	title="Top"> <img src="resources/images/topButton3.gif"
+	style="width: 30px; height: 30px; margin: -10px -5px;" border="0" /></a>
 </body>
 </html>
