@@ -1105,7 +1105,7 @@ $(document).ready(function() {
 				    e.parentElement.previousSibling.style.display = "none";
 				    e.parentElement.parentElement.style.border = "0px";
 				    e.parentElement.parentElement.style.background = "unset";
-				});				print.append("3층엘리베이터에서  직진하여 이비인후과 옆에 있습니다.");
+				});				print.append("3층 엘리베이터에서  직진하여 이비인후과 옆에 있습니다.");
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown){
             	console.log("조회 실패." + XMLHttpRequest + textStatus + errorThrown);
