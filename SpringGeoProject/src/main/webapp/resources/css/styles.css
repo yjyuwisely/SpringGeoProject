@@ -24,6 +24,26 @@
  font-family: 'Montserrat', sans-serif;
  } 
 
+/* 스크롤바 */
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+/*  background: #eeeeee;*/
+	display: none;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #55CA88 0%, #3396ff 100%);
+  /*#3396ff linear-gradient(#c2e59c, #64b3f4)*/;
+  border-radius: 5px;
+}
+
+ 스크롤을 부드럽게
+html {
+    scroll-behavior: smooth;
+} 
+
+
 /* 배경 그라데이션 효과 */
 header {
 	height: 100px;
