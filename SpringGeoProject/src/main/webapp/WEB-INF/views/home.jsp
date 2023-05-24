@@ -12,6 +12,7 @@ request.setCharacterEncoding("utf-8");
 	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta name="description" content="" />
 <meta name="author" content="" />
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <title>울산 그린 병원</title>
 <!-- Favicon-->
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -76,7 +77,9 @@ request.setCharacterEncoding("utf-8");
 <script>
 	AOS.init();
 </script>
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!-- <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+
 <script src="resources/handledata.js"></script>
 <!-- Kakao Map API -->
 <script type="text/javascript"

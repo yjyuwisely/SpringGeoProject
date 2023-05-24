@@ -12,6 +12,7 @@ request.setCharacterEncoding("utf-8");
 	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta name="description" content="" />
 <meta name="author" content="" />
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <title>병원 내부 위치 안내 가이드</title>
 <!-- Favicon-->
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -226,7 +227,8 @@ html, body {
 		<script>
 		AOS.init();
 	</script>
-		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!-- 		<script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
+		<script src="//code.jquery.com/jquery-latest.min.js"></script>
 		<script src="resources/handledata.js"></script>
 		<!-- Kakao Map API -->
 		<script type="text/javascript"
